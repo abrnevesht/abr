@@ -3,7 +3,14 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
+group :production, :staging do
+  gem "pg"
+end
+
+group :development, :test do
+  gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
+end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -35,6 +42,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-google'
+gem 'omniauth-google-oauth2'
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
