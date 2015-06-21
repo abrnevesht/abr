@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'manage/main'
+
   get 'welcome/index'
+  get 'welcome/guid'
 
   get 'auth/login_email'
 
