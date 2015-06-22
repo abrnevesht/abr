@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+</html>
+<head>
+  <title><%= yield(:title) %></title>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-6">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<page size="A4">
+
+   <div id="logo">
+      <img src= "<%= yield(:logo) %>" alt="logo" style="width:8cm;height:8cm">
+   </div>
+   <div id="kenar_logo">
+      <%= yield(:k_logo) %>
+   </div>
+   <div id="sarmaghale">
+   <div id="titr1_sar">
+      <%= yield(:titr1) %>
+   </div>
+    <br>
+      <%= yield(:text1) %>
+   </div>
+   <div id="titre2">
+   <div id="titr2_sar">
+      <%= yield(:titr2) %>
+   </div>
+      <br>
+      <%= yield(:text2) %>
+   </div>
+</page>
+<page size="A4">
+  <div id="titre3">
+    <div id="sar_titr3">
+      <%= yield(:titr3) %>
+    </div>
+      <br>
+      <%= yield(:text3) %>
+  </div>
+
+  <div id="titre4">
+    <div id="sar_titr4">
+      <%= yield(:titr4) %>
+    </div>
+      <br>
+      <%= yield(:text4) %>
+  </div>
+
+  <div id="shenasnameh">
+    مدیر مسئول:
+     <%= yield(:modir) %>
+;
+
+سردبیر:
+
+     <%= yield(:sardabir) %>
+
+  </div>
+
+</page>
+
+</body>
+</html>
