@@ -1,18 +1,25 @@
 Rails.application.routes.draw do
 
+
+  get 'editor/show'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
   get 'manage/main'
 
   get 'welcome/index'
   get 'welcome/guid'
 
   get 'auth/login_email'
-  devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
+  #devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  #root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -63,4 +70,14 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   resources :mags
+
+  get 'auth/:provider/callback', to: 'sessions#create'
+  #get 'auth/google_login/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+  get 'signout', to: 'sessions#destroy', as: 'signout'
+
+  resources :sessions, only: [:create, :destroy]
+  resource :who_ru, only: [:show]
+
+  root to: "who_ru#show"
 end
