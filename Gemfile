@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
-gem 'bcrypt',               '3.1.10'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 group :production, :staging do
@@ -42,10 +41,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 
-gem 'devise'
 gem 'omniauth'
 gem 'omniauth-google'
 gem 'omniauth-google-oauth2'
+gem 'haml'
+gem 'haml-rails'
+gem 'figaro'
+
+gem 'tinymce-rails'
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console

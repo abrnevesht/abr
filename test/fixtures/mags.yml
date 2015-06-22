@@ -2,32 +2,30 @@
 
 one:
   name: MyString
-  date: 2015-06-20 14:59:49
-  logo: MyString
+  descrip: MyString
   titr1: MyString
   text1: MyText
   titr2: MyString
   text2: MyText
   titr3: MyString
   text3: MyText
-  titr4: MyString
-  text4: MyText
+  logo: MyString
+  data: 2015-06-21 20:06:58
+  email: MyString
   modir: MyString
   sardabir: MyString
-  email: MyString
 
 two:
   name: MyString
-  date: 2015-06-20 14:59:49
-  logo: MyString
+  descrip: MyString
   titr1: MyString
   text1: MyText
   titr2: MyString
   text2: MyText
   titr3: MyString
   text3: MyText
-  titr4: MyString
-  text4: MyText
+  logo: MyString
+  data: 2015-06-21 20:06:58
+  email: MyString
   modir: MyString
   sardabir: MyString
-  email: MyString

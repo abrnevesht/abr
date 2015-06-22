@@ -1,0 +1,92 @@
+
+#body_page {
+  background: #DCE3DC; 
+}
+page[size="A4"] {
+  background: white;
+  width: 21cm;
+  height: 29.7cm;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+@media print {
+  body, page[size="A4"] {
+    margin: 0;
+    box-shadow: 0;
+  }
+}
+
+#logo {
+  width : 8cm;
+  height : 8cm;
+  float : right;
+}
+
+#kenar_logo {
+  width : 12cm;
+  height : 8cm;
+  float : left;
+}
+
+#titr1_sar{
+  width : 8cm;
+  height : 1.5cm;
+  background-color :rgba(0,0,0,0.3);
+}
+
+#sarmaghale{
+  width : 8cm;
+  height : 21.5cm;
+  float : right;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.3);
+}
+
+#titr2_sar{
+  width : 12cm;
+  height : 1.5cm;
+  background-color :rgba(0,0,0,0.3);
+
+}
+#titre2{
+  width : 12cm;
+  height : 21.5cm;
+  float : left;
+}
+
+#titr3_sar{
+  width : 10cm;
+  height : 1.5cm;
+  background-color :rgba(0,0,0,0.3);
+
+}
+#titre3{
+  width : 21cm;
+  height : 15cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.3);
+}
+
+#titr4_sar{
+  width : 21cm;
+  height : 1.5cm;
+  background-color :rgba(0,0,0,0.3);
+
+}
+#titre4{
+  width : 21cm;
+  height : 13cm;
+}
+
+#shenasnameh
+{
+  width : 21cm;
+  height : 1.5cm;
+  float:right;
+  text-align: center;
+  background-color :rgba(0,0,0,0.3);
+}
+
+p {
+    white-space: nowrap;
+} 
