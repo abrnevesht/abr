@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'users/new'
+
   get 'manage/main'
 
   get 'welcome/index'
@@ -7,7 +9,7 @@ Rails.application.routes.draw do
 
   get 'auth/login_email'
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
-
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
