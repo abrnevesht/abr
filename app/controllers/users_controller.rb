@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   	#@users = Array.new(2){User.new}
     @user = User.new
     @user2 = User.new
-    #render :layout => "manage_layout"
+    #render layout: "manage_layout"
   end
   
   def create

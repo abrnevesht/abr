@@ -8,13 +8,14 @@
   	  <%= user_form.label :Magazine_Name %>
       <%= user_form.text_field :name, class: 'form-control'%> 
 
-      <%= user_form.label :Director_email %>
+      <%= user_form.label :Email %>
       <%= user_form.email_field :email, class: 'form-control' %>
+
+      <%= user_form.label :Password %>
+      <%= user_form.password_field :password, class: 'form-control' %>
       
       <%= user_form.submit "Create my magazine", class: "btn btn-primary" %>    
 
     <% end %>
-
-
   </div>
 </div>

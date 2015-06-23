@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150622173353) do
+ActiveRecord::Schema.define(version: 20150623085308) do
 
   create_table "mags", force: :cascade do |t|
     t.string   "name"
@@ -42,8 +42,7 @@ ActiveRecord::Schema.define(version: 20150622173353) do
     t.datetime "updated_at",       null: false
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
+    t.string   "password_digest"
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end
