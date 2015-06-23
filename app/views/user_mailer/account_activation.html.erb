@@ -1,0 +1,10 @@
+<h1>Abrnevesht</h1>
+
+<p>سلام <%= @user.name %>,</p>
+
+<p>
+به ابرنوشت خوش آمدید! بر روی پیوند زیر کلیک نمایید تا حساب کاربری شما فعال شود:
+</p>
+
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>

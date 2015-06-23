@@ -13,6 +13,9 @@
 
       <%= user_form.label :Password %>
       <%= user_form.password_field :password, class: 'form-control' %>
+
+      <%= user_form.label :password_confirmation, "Confirmation" %>
+      <%= user_form.password_field :password_confirmation %>
       
       <%= user_form.submit "Create my magazine", class: "btn btn-primary" %>    
 
