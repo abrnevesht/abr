@@ -42,11 +42,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth'
 gem 'omniauth-google'
 gem 'omniauth-google-oauth2'
-gem 'haml'
-gem 'haml-rails'
+#gem 'haml'
+#gem 'haml-rails'
 gem 'figaro'
 
-gem 'tinymce-rails'
+#gem 'mercury-rails'
+#gem 'tinymce-rails'
+gem 'ckeditor'
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console

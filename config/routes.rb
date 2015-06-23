@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-
-  get 'editor/show'
+  get 'single_texts/edit'
 
   get 'sessions/create'
 
