@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield(:title) %></title>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-6">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="body">
+<%= render 'layouts/header' %>
+<div id="nav" font-size="large">
+<%if params[:action] == "show" %>
+  <%= image_tag("/assets/images/print.png", :width=>150, :height=>150, :onclick=>"divPrint();", :class=>'btn') %>
+<%end%>
+</div>
+
+<div id="section">
+
+<page size="A4" id="mag">
+   <div id="logo">
+      <img src= "<%= yield(:logo) %>" alt="تصویر لوگوی نشریه" style="width:8cm;height:8cm">
+      <%= yield(:logo) %>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "logo" }%>
+      <% end %>
+   </div>
+   <div id="kenar_logo_container">
+     
+      <%= yield(:k_logo) %>
+      <%if params[:action] != "show" %>
+      <%if params[:action] == "new" %>
+           <%= yield(:descrip_new) %>
+      <% end %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "descrip" }%>
+      <% end %>
+   </div>
+   <div id="sarmaghale">
+   <div id="titr1_sar">
+      <% yield(:titr1) %>
+      <%if params[:action] != "show" %>
+         <%if params[:action] == "new" %>
+تیتر مطلب اول
+          <% end %>
+      
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id],:field => "titr1" }%>
+      <% end %>
+   </div>
+    <br>
+      <%= yield(:text1) %>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "text1" }%>
+      <% end %>
+   </div>
+   <div id="titre2">
+   <div id="titr2_sar">
+      <%= yield(:titr2) %>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "titr2" }%>
+      <% end %>
+   </div>
+      <br>
+      <%= yield(:text2) %>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "text2" }%>
+      <% end %>
+   </div>
+</page>
+<page size="A4">
+  <div id="titre3">
+    <div id="sar_titr3" align="center">
+      <%= yield(:titr3) %>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "titr3" }%>
+      <% end %>
+    </div>
+      <br>
+      <%= yield(:text3) %>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "text3" }%>
+      <% end %>
+  </div>
+
+  <div id="titre4">
+    <div id="sar_titr4" align="center">
+      <%= yield(:titr4) %>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "titr4" }%>
+      <% end %>
+    </div>
+      <br>
+      <%= yield(:text4) %>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "text4" }%>
+      <% end %>
+  </div>
+
+  <div id="shenasnameh">
+    مدیر مسئول:
+     <%= yield(:modir) %>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "modir" }%>
+      <% end %>
+;
+
+سردبیر:
+
+     <%= yield(:sardabir) %>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "sardabir" }%>
+      <% end %>
+;
+
+با ما در ارتباط باشید
+<p>
+<%= yield(:email) %>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "email" }%>
+      <% end %>
+
+  </div>
+</page>
+</div>
+
+<div id="footer" >
+
+</div>
+</div>
+</body>
+</html>

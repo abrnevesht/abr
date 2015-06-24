@@ -1,0 +1,115 @@
+
+#body_page {
+  background: #DCE3DC; 
+}
+
+page[size="A4"] {
+  background: white;
+  width: 21cm;
+  height: 29.7cm;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  padding: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+@media print {
+  body, page[size="A4"] {
+    margin: 0;
+    box-shadow: 0;
+  }
+}
+
+#logo {
+  width : 8cm;
+  height : 8cm;
+  float : right;
+}
+
+#body {
+    background: #DCE3DC url("/assets/images/books.png") no-repeat right top;
+}
+#kenar_logo_container {
+  width : 11cm;
+  height : 7cm;
+  float : left;
+  border-style: dashed ;
+  padding: 0.5cm;
+}
+
+
+#titr1_sar{
+  font-size:large;
+  width : 8cm;
+  height : 1.5cm;
+  background-color :rgba(0,0,0,0.3);
+}
+
+#sarmaghale{
+  border-style: ridge;
+  width : 8cm;
+  height : 21.5cm;
+  float : right;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.3);
+  text-align: justify;
+}
+
+#titr2_sar{
+  width : 12cm;
+  height : 1.5cm;
+  background-color :rgba(0,0,0,0.3);
+  text-align: center;
+
+}
+#titre2{
+  border-style: ridge;
+  width : 12cm;
+  height : 21.5cm;
+  float : left;
+  text-align: right;
+}
+
+#titr3_sar{
+  border-style: dashed;
+  width : 10cm;
+  height : 1.5cm;
+  text-align: center;
+  background-color :rgba(0,0,0,0.3);
+
+}
+#titre3{
+  border-style: ridge;
+  width : 21cm;
+  height: 15cm;
+  text-align: right;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.3);
+}
+
+#titr4_sar{
+  text-align: center;
+  width : 21cm;
+  height : 1.5cm;
+  background-color :rgba(0,0,0,0.3);
+
+}
+#titre4{
+  border-style: ridge;
+  width : 21cm;
+  height : 13cm;
+  text-align: right;
+} 
+
+
+#shenasnameh
+{
+  width : 21cm;
+  height : 1.5cm;
+  float:right;
+  text-align: center;
+  background-color :rgba(0,0,0,0.3);
+  line-height: 70%;
+}
+
+p {
+    white-space: nowrap;
+} 

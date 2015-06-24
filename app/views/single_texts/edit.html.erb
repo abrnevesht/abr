@@ -1,0 +1,15 @@
+<% field = params[:field]%>
+<% s=url_for(params.except(:field)) %>
+<% s=s.sub! 'single_texts', 'mags' %>
+<% s=s.sub! 'edit', '' %>
+<% s=s.sub! '?', '/' %>
+<% s=s.sub! 'index=', '' %>
+<% s=s+'?field='%>
+<% s=s+field%>
+<%= form_for @con, method:"put", :url => url_for(s) do |f| %>
+  <%= f.cktext_area :content,:cols => 80 ,:value => @con , :id => 'sometext',:ckeditor => {:uiColor => '#AADC6E'} %>
+  <%= f.submit "ذخیره تغییرات", class: "btn btn-primary" %>
+<% end -%>
+
+
+
