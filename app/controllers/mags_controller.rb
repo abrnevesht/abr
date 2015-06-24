@@ -41,7 +41,7 @@ class MagsController < ApplicationController
       render "new"
     end
   end
-  
+
   def destroy
    Mag.find(params[:id]).destroy
     redirect_to mags_url
