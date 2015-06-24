@@ -1,3 +1,4 @@
+
 # auth_controller.rb
 class AuthController < ApplicationController
 	def callback

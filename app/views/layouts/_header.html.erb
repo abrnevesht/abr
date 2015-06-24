@@ -3,6 +3,13 @@
   <li><a href="#" class="red dark">خروج</a> </li>
   <li><a href="#" class="green dark">راهنما</a></li>
 
+	<% if logged_in? %>
+          <li><a href="sessions/destroy" class="red dark">خروج</a> </li>
+    <% else %>
+          <li><a href="login" class="green dark">ورود</a></li>
+    <% end %>
+    <li><a href="#" class="green dark">راهنما</a></li>
+
   </li>
 </ul>
   </div>
