@@ -2,6 +2,6 @@ class WelcomeController < ApplicationController
   def index
   end
   def guid
-     render "guild.html"
+     render "guid.html"
   end
 end

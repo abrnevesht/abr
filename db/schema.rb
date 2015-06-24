@@ -54,10 +54,15 @@ ActiveRecord::Schema.define(version: 20150623192349) do
     t.string   "provider"
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
+    t.string   "password_digest"
+    t.string   "activation_digest"
+    t.boolean  "activated",         default: false
+    t.datetime "activated_at"
+    t.string   "reset_digest"
   end
 
 end
