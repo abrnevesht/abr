@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-<<<<<<< HEAD
+
   mount Ckeditor::Engine => '/ckeditor'
-=======
+
   get 'password_resets/new'
 
   get 'password_resets/edit'
@@ -16,7 +16,6 @@ Rails.application.routes.draw do
   get    'manage'  => 'manage#main'
 
 
->>>>>>> refs/remotes/origin/master
   get 'single_texts/edit'
   get 'single_texts/update'
 
@@ -34,12 +33,10 @@ Rails.application.routes.draw do
 
   #devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
 
-<<<<<<< HEAD
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
