@@ -1,44 +1,3 @@
-
-#nav {
-    line-height:30px;
-    height:1000px;
-    width:200px;
-    float:left;
-    color:#DCE3DC;
-    padding:5px;
-    font-size: x-large;
-    background-color:#343434;
-}
-/* unvisited link */
-a:link {
-    color:#DCE3DC;
-    text-decoration: none;
-}
-
-/* visited link */
-a:visited {
-    color: #DCE3DC;
-    text-decoration: none;
-}
-
-/* mouse over link */
-a:hover {
-    color: #5A7D19;
-    text-decoration: none;
-}
-
-/* selected link */
-a:active {
-    color: #DCE3DC;
-    text-decoration: none;
-}
-
-#section {
-    width:600px;
-    height:1000px;
-    float:left;
-    padding:10px;
-}
 #footer {
     background-color:black;
     color:white;
@@ -48,9 +7,7 @@ a:active {
     float:center;
 }
 
-#body {
-    background: #DCE3DC url("/assets/images/books.png") no-repeat right top;
-}
+
 /*********** BUTTON *************/
 .cbdb-menu li {
 	display: block;

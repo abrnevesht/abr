@@ -1,20 +1,25 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or any plugin's vendor/assets/javascripts directory can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file.
-//
-// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
-// about supported directives.
-//
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require_tree .
-//= require ckeditor/init
+/// <reference path="http://code.jquery.com/jquery-1.4.1-vsdoc.js" />
+/*
+* Print Element Plugin 1.2
+*
+* Copyright (c) 2010 Erik Zaadi
+*
+* Inspired by PrintArea (http://plugins.jquery.com/project/PrintArea) and
+* http://stackoverflow.com/questions/472951/how-do-i-print-an-iframe-from-javascript-in-safari-chrome
+*
+*  Home Page : http://projects.erikzaadi/jQueryPlugins/jQuery.printElement 
+*  Issues (bug reporting) : http://github.com/erikzaadi/jQueryPlugins/issues/labels/printElement
+*  jQuery plugin page : http://plugins.jquery.com/project/printElement 
+*  
+*  Thanks to David B (http://github.com/ungenio) and icgJohn (http://www.blogger.com/profile/11881116857076484100)
+*  For their great contributions!
+* 
+* Dual licensed under the MIT and GPL licenses:
+*   http://www.opensource.org/licenses/mit-license.php
+*   http://www.gnu.org/licenses/gpl.html
+*   
+*   Note, Iframe Printing is not supported in Opera and Chrome 3.0, a popup window will be shown instead
+*/
 ; (function (window, undefined) {
     var document = window["document"];
     var $ = window["jQuery"];
@@ -174,10 +179,3 @@
         return html.join('');
     };
 })(window);
-
-  function divPrint() {
-     $('#mag').printElement();
-}
-
-
-

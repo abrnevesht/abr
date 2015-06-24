@@ -14,7 +14,7 @@ class MagsController < ApplicationController
   end
 
   def create
-    @mag =Mag.new(:logo=>'')
+    @mag =Mag.new()
     if @mag.save
       redirect_to :controller => 'mags', :action => 'edit', :id => @mag.id 
     else

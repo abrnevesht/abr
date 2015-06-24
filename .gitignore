@@ -16,8 +16,14 @@
 !/log/.keep
 /tmp
 <<<<<<< HEAD
+
+# Ignore application configuration
+/config/application.yml
+=======
+<<<<<<< HEAD
 =======
 
 # Ignore application configuration
 /config/application.yml
 >>>>>>> refs/remotes/origin/master
+>>>>>>> 28d9ca5558dde4dadfeecef6651419471f46e011

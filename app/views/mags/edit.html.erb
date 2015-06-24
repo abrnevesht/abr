@@ -1,3 +1,4 @@
+<% provide(:title, "ویرایش نشریه")%>
 <% provide(:logo, @mag.logo.html_safe)%>
 <% provide(:k_logo, @mag.descrip.html_safe)%>
 <% provide(:titr1,CGI.unescapeHTML(@mag.titr1).html_safe) %>
@@ -10,7 +11,7 @@
 <% provide(:text4, @mag.text4.html_safe)%>
 <% provide(:modir, @mag.modir.html_safe)%>
 <% provide(:sardabir, @mag.sardabir.html_safe)%>
-
+<% provide(:email, @mag.email.html_safe)%>
 
 
 

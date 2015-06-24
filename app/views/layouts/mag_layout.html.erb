@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <% require 'cgi' %>
 </html>
 <head>
@@ -9,11 +10,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="body">
+<%= render 'layouts/header' %>
+<div id="nav" font-size="large">
+<%if params[:action] == "show" %>
+  <%= image_tag("/assets/images/print.png", :width=>150, :height=>150, :onclick=>"divPrint();", :class=>'btn') %>
+<%end%>
+</div>
 
-<page size="A4">
+<div id="section">
+
+<page size="A4" id="mag">
    <div id="logo">
-      <img src= "<%= yield(:logo) %>" alt="logo" style="width:8cm;height:8cm">
-      <%= yield(:k_logo) %>
+      <img src= "<%= yield(:logo) %>" alt="تصویر لوگوی نشریه" style="width:8cm;height:8cm">
+      <%= yield(:logo) %>
       <%if params[:action] != "show" %>
         <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "logo" }%>
       <% end %>
@@ -61,7 +71,7 @@
 </page>
 <page size="A4">
   <div id="titre3">
-    <div id="sar_titr3">
+    <div id="sar_titr3" align="center">
       <%= yield(:titr3) %>
       <%if params[:action] != "show" %>
         <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "titr3" }%>
@@ -75,7 +85,7 @@
   </div>
 
   <div id="titre4">
-    <div id="sar_titr4">
+    <div id="sar_titr4" align="center">
       <%= yield(:titr4) %>
       <%if params[:action] != "show" %>
         <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "titr4" }%>
@@ -102,6 +112,23 @@
       <%if params[:action] != "show" %>
         <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "sardabir" }%>
       <% end %>
+;
+
+با ما در ارتباط باشید
+<p>
+<%= yield(:email) %>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "email" }%>
+      <% end %>
+
+  </div>
+</page>
+</div>
+
+<div id="footer" >
+
+</div>
+</div>
 
   </div>
 

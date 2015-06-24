@@ -1,0 +1,496 @@
+2,3c2,3
+< total 47
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 .
+---
+> total 48
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 .
+4a5
+> -rwxrwxrwx 1 root root   97 Jun 23 23:33 activation_digest:string
+7c8
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 config
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:36 config
+9,13c10,14
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 db
+< -rwxrwxrwx 1 root root 1805 Jun 23 23:39 Gemfile
+< -rwxrwxrwx 1 root root 5243 Jun 23 23:39 Gemfile.lock
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 .git
+< -rwxrwxrwx 1 root root  534 Jun 23 23:39 .gitignore
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:36 db
+> -rwxrwxrwx 1 root root 1880 Jun 23 23:33 Gemfile
+> -rwxrwxrwx 1 root root 5359 Jun 23 23:34 Gemfile.lock
+> drwxrwxrwx 1 root root 4096 Jun 23 23:35 .git
+> -rwxrwxrwx 1 root root  590 Jun 23 23:33 .gitignore
+19a21
+> -rwxrwxrwx 1 root root   92 Jun 23 23:33 reset_sent_at:datetime
+27c29
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+29,33c31,35
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 controllers
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 helpers
+< drwxrwxrwx 1 root root    0 Jun 23 23:39 mailers
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 models
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 views
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 controllers
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 helpers
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 mailers
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 models
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 views
+40,41c42,43
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 javascripts
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 stylesheets
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 javascripts
+> drwxrwxrwx 1 root root 4096 Jun 23 23:37 stylesheets
+51,52c53,54
+< total 11
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 .
+---
+> total 13
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 .
+54c56,58
+< -rwxrwxrwx 1 root root  693 Jun 23 23:39 application.js
+---
+> -rwxrwxrwx 1 root root  211 Jun 23 23:33 account_activations.coffee
+> -rwxrwxrwx 1 root root  692 Jun 23 23:33 application.js
+> -rwxrwxrwx 1 root root  211 Jun 23 23:33 auth.coffee
+56a61
+> -rwxrwxrwx 1 root root  211 Jun 23 23:33 password_resets.coffee
+58a64
+> -rwxrwxrwx 1 root root  211 Jun 23 23:33 users.coffee
+62,63c68,69
+< total 22
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 .
+---
+> total 36
+> drwxrwxrwx 1 root root 4096 Jun 23 23:37 .
+65c71,75
+< -rwxrwxrwx 1 root root  688 Jun 23 23:39 application.css
+---
+> -rwxrwxrwx 1 root root  189 Jun 23 23:33 account_activations.scss
+> -rwxrwxrwx 1 root root  688 Jun 23 23:32 application.css
+> -rwxrwxrwx 1 root root  175 Jun 23 23:33 auth.scss
+> -rwxrwxrwx 1 root root 1232 Jun 23 23:33 custom.css.scss
+> -rwxrwxrwx 1 root root 6148 Jun 23 23:33 .DS_Store
+67c77
+< -rwxrwxrwx 1 root root 3009 Jun 23 23:39 manage.scss
+---
+> -rwxrwxrwx 1 root root 3009 Jun 23 23:33 manage.scss
+68a79
+> -rwxrwxrwx 1 root root  185 Jun 23 23:33 password_resets.scss
+70a82
+> -rwxrwxrwx 1 root root  176 Jun 23 23:33 users.scss
+74,75c86,87
+< total 15
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 .
+---
+> total 27
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 .
+77,78c89,91
+< -rwxrwxrwx 1 root root  226 Jun 23 23:39 application_controller.rb
+< -rwxrwxrwx 1 root root  157 Jun 23 23:39 auth_controller.rb
+---
+> -rwxrwxrwx 1 root root  482 Jun 23 23:33 account_activations_controller.rb
+> -rwxrwxrwx 1 root root  311 Jun 23 23:33 application_controller.rb
+> -rwxrwxrwx 1 root root  158 Jun 23 23:33 auth_controller.rb
+81,82c94,96
+< -rwxrwxrwx 1 root root  111 Jun 23 23:39 manage_controller.rb
+< -rwxrwxrwx 1 root root  257 Jun 23 23:39 sessions_controller.rb
+---
+> -rwxrwxrwx 1 root root  111 Jun 23 23:33 manage_controller.rb
+> -rwxrwxrwx 1 root root 1474 Jun 23 23:33 password_resets_controller.rb
+> -rwxrwxrwx 1 root root  863 Jun 23 23:33 sessions_controller.rb
+84c98,99
+< -rwxrwxrwx 1 root root  112 Jun 23 23:39 welcome_controller.rb
+---
+> -rwxrwxrwx 1 root root  731 Jun 23 23:33 users_controller.rb
+> -rwxrwxrwx 1 root root  111 Jun 23 23:33 welcome_controller.rb
+89c104
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+93,94c108,109
+< total 11
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 .
+---
+> total 13
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 .
+95a111
+> -rwxrwxrwx 1 root root   36 Jun 23 23:33 account_activations_helper.rb
+96a113
+> -rwxrwxrwx 1 root root   22 Jun 23 23:33 auth_helper.rb
+99c116,117
+< -rwxrwxrwx 1 root root   26 Jun 23 23:39 sessions_helper.rb
+---
+> -rwxrwxrwx 1 root root   32 Jun 23 23:33 password_resets_helper.rb
+> -rwxrwxrwx 1 root root  259 Jun 23 23:33 sessions_helper.rb
+100a119
+> -rwxrwxrwx 1 root root   23 Jun 23 23:33 users_helper.rb
+104,105c123,124
+< total 4
+< drwxrwxrwx 1 root root    0 Jun 23 23:39 .
+---
+> total 6
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 .
+106a126
+> -rwxrwxrwx 1 root root  102 Jun 23 23:33 application_mailer.rb
+107a128
+> -rwxrwxrwx 1 root root  558 Jun 23 23:33 user_mailer.rb
+110,111c131,132
+< total 13
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 .
+---
+> total 24
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 .
+114a136
+> -rwxrwxrwx 1 root root 6148 Jun 23 23:33 .DS_Store
+117c139
+< -rwxrwxrwx 1 root root  381 Jun 23 23:39 user.rb
+---
+> -rwxrwxrwx 1 root root 1869 Jun 23 23:33 user.rb
+122c144
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+130c152
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+134,135c156,157
+< total 20
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 .
+---
+> total 32
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 .
+136a159
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 auth
+138c161,162
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 layouts
+---
+> -rwxrwxrwx 1 root root 6148 Jun 23 23:33 .DS_Store
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 layouts
+140,141c164,167
+< drwxrwxrwx 1 root root    0 Jun 23 23:39 manage
+< drwxrwxrwx 1 root root    0 Jun 23 23:39 sessions
+---
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 manage
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 password_resets
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 sessions
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 shared
+143c169,177
+< drwxrwxrwx 1 root root    0 Jun 23 23:39 welcome
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 user_mailer
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 users
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 welcome
+> 
+> ../abr-master/app/views/auth:
+> total 5
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 .
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+> -rwxrwxrwx 1 root root  311 Jun 23 23:33 login_email.html.erb
+148c182
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+153,156c187,191
+< total 26
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 .
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+< -rwxrwxrwx 1 root root  342 Jun 23 23:39 application.html.erb
+---
+> total 35
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 .
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+> -rwxrwxrwx 1 root root  510 Jun 23 23:33 application.html.erb
+> -rwxrwxrwx 1 root root 6148 Jun 23 23:33 .DS_Store
+158c193
+< -rwxrwxrwx 1 root root  167 Jun 23 23:39 _header.html.erb
+---
+> -rwxrwxrwx 1 root root  309 Jun 23 23:33 _header.html.erb
+160c195,197
+< -rwxrwxrwx 1 root root  982 Jun 23 23:39 manage_layout.html.erb
+---
+> -rwxrwxrwx 1 root root   51 Jun 23 23:33 mailer.html.erb
+> -rwxrwxrwx 1 root root   13 Jun 23 23:33 mailer.text.erb
+> -rwxrwxrwx 1 root root  982 Jun 23 23:33 manage_layout.html.erb
+167c204
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+174,176c211,220
+< drwxrwxrwx 1 root root    0 Jun 23 23:39 .
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+< -rwxrwxrwx 1 root root  943 Jun 23 23:39 main.html.erb
+---
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 .
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+> -rwxrwxrwx 1 root root  943 Jun 23 23:33 main.html.erb
+> 
+> ../abr-master/app/views/password_resets:
+> total 6
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 .
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+> -rwxrwxrwx 1 root root  620 Jun 23 23:33 edit.html.erb
+> -rwxrwxrwx 1 root root  369 Jun 23 23:33 new.html.erb
+179,181c223,225
+< total 5
+< drwxrwxrwx 1 root root    0 Jun 23 23:39 .
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> total 6
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 .
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+183a228,234
+> -rwxrwxrwx 1 root root  561 Jun 23 23:33 new.html.erb
+> 
+> ../abr-master/app/views/shared:
+> total 5
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 .
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+> -rwxrwxrwx 1 root root  305 Jun 23 23:33 _error_messages.html.erb
+188c239
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+190a242,258
+> ../abr-master/app/views/user_mailer:
+> total 11
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 .
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+> -rwxrwxrwx 1 root root  359 Jun 23 23:33 account_activation.html.erb
+> -rwxrwxrwx 1 root root  250 Jun 23 23:33 account_activation.text.erb
+> -rwxrwxrwx 1 root root  619 Jun 23 23:33 password_reset.html.erb
+> -rwxrwxrwx 1 root root  490 Jun 23 23:33 password_reset.text.erb
+> 
+> ../abr-master/app/views/users:
+> total 9
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 .
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+> -rwxrwxrwx 1 root root   97 Jun 23 23:33 index.html.erb
+> -rwxrwxrwx 1 root root  727 Jun 23 23:33 new.html.erb
+> -rwxrwxrwx 1 root root   64 Jun 23 23:33 show.html.erb
+> 
+193,194c261,262
+< drwxrwxrwx 1 root root    0 Jun 23 23:39 .
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 .
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+196c264
+< -rwxrwxrwx 1 root root 1662 Jun 23 23:39 index.html
+---
+> -rwxrwxrwx 1 root root 1664 Jun 23 23:33 index.html
+201c269
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+209,210c277,278
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 .
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:36 .
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+216,219c284,287
+< drwxrwxrwx 1 root root    0 Jun 23 23:39 environments
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 initializers
+< drwxrwxrwx 1 root root    0 Jun 23 23:39 locales
+< -rwxrwxrwx 1 root root 2201 Jun 23 23:39 routes.rb
+---
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 environments
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 initializers
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 locales
+> -rwxrwxrwx 1 root root 2682 Jun 23 23:36 routes.rb
+225,228c293,296
+< drwxrwxrwx 1 root root    0 Jun 23 23:39 .
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+< -rwxrwxrwx 1 root root 1600 Jun 23 23:39 development.rb
+< -rwxrwxrwx 1 root root 3304 Jun 23 23:39 production.rb
+---
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 .
+> drwxrwxrwx 1 root root 4096 Jun 23 23:36 ..
+> -rwxrwxrwx 1 root root 1731 Jun 23 23:33 development.rb
+> -rwxrwxrwx 1 root root 3875 Jun 23 23:33 production.rb
+232,234c300,302
+< total 21
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 .
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> total 29
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 .
+> drwxrwxrwx 1 root root 4096 Jun 23 23:36 ..
+238a307
+> -rwxrwxrwx 1 root root 6148 Jun 23 23:33 .DS_Store
+242c311
+< -rwxrwxrwx 1 root root  234 Jun 23 23:39 omniauth.rb
+---
+> -rwxrwxrwx 1 root root  233 Jun 23 23:33 omniauth.rb
+247,249c316,319
+< total 5
+< drwxrwxrwx 1 root root    0 Jun 23 23:39 .
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> total 9
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 .
+> drwxrwxrwx 1 root root 4096 Jun 23 23:36 ..
+> -rwxrwxrwx 1 root root 4025 Jun 23 23:33 devise.en.yml
+253,255c323,325
+< total 49
+< drwxrwxrwx 1 root root  4096 Jun 23 23:39 .
+< drwxrwxrwx 1 root root  4096 Jun 23 23:39 ..
+---
+> total 77
+> drwxrwxrwx 1 root root  4096 Jun 23 23:36 .
+> drwxrwxrwx 1 root root  4096 Jun 23 23:33 ..
+256a327
+> -rwxrwxrwx 1 root root  6148 Jun 23 23:33 .DS_Store
+258,259c329,331
+< drwxrwxrwx 1 root root  4096 Jun 23 23:39 migrate
+< -rwxrwxrwx 1 root root  2212 Jun 23 23:39 schema.rb
+---
+> -rwxrwxrwx 1 root root 18432 Jun 23 23:33 .fuse_hidden000002f400000002
+> drwxrwxrwx 1 root root  4096 Jun 23 23:33 migrate
+> -rwxrwxrwx 1 root root  2425 Jun 23 23:36 schema.rb
+263,265c335,337
+< total 16
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 .
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> total 24
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 .
+> drwxrwxrwx 1 root root 4096 Jun 23 23:36 ..
+268,270d339
+< -rwxrwxrwx 1 root root  147 Jun 23 23:39 20150622062317_add2_cols_to_mags.rb
+< -rwxrwxrwx 1 root root  108 Jun 23 23:39 20150622063254_add_titr4_to_mags.rb
+< -rwxrwxrwx 1 root root  106 Jun 23 23:39 20150622063350_add_text4_to_mags.rb
+273a343,345
+> -rwxrwxrwx 1 root root  129 Jun 23 23:33 20150623085308_add_password_digest_to_users.rb
+> -rwxrwxrwx 1 root root  235 Jun 23 23:33 20150623103340_add_activation_to_users.rb
+> -rwxrwxrwx 1 root root  117 Jun 23 23:33 20150623113751_add_reset_to_users.rb
+274a347
+> -rwxrwxrwx 1 root root 6148 Jun 23 23:33 .DS_Store
+277,279c350,352
+< total 59
+< drwxrwxrwx 1 root root  4096 Jun 23 23:39 .
+< drwxrwxrwx 1 root root  4096 Jun 23 23:39 ..
+---
+> total 67
+> drwxrwxrwx 1 root root  4096 Jun 23 23:35 .
+> drwxrwxrwx 1 root root  4096 Jun 23 23:33 ..
+285c358
+< -rwxrwxrwx 1 root root    25 Jun 23 23:39 HEAD
+---
+> -rwxrwxrwx 1 root root    22 Jun 23 23:35 HEAD
+287c360
+< -rwxrwxrwx 1 root root 16272 Jun 23 23:39 index
+---
+> -rwxrwxrwx 1 root root 21416 Jun 23 23:35 index
+297c370
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:35 ..
+302c375
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:35 ..
+316c389
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:35 ..
+322,323c395,396
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+< -rwxrwxrwx 1 root root 3204 Jun 23 23:39 HEAD
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:35 ..
+> -rwxrwxrwx 1 root root 3029 Jun 23 23:35 HEAD
+365c438
+< drwxrwxrwx 1 root root  4096 Jun 23 23:39 ..
+---
+> drwxrwxrwx 1 root root  4096 Jun 23 23:35 ..
+1771c1844
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:35 ..
+1813c1886
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+1839c1912
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+1846c1919
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+1991,1993c2064,2066
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 controllers
+< drwxrwxrwx 1 root root    0 Jun 23 23:39 fixtures
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 controllers
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 fixtures
+1996,1997c2069,2070
+< drwxrwxrwx 1 root root    0 Jun 23 23:39 mailers
+< drwxrwxrwx 1 root root    0 Jun 23 23:39 models
+---
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 mailers
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 models
+2001,2002c2074,2075
+< total 11
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 .
+---
+> total 12
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 .
+2003a2077
+> -rwxrwxrwx 1 root root  173 Jun 23 23:33 auth_controller_test.rb
+2008a2083
+> -rwxrwxrwx 1 root root  158 Jun 23 23:33 users_controller_test.rb
+2012,2013c2087,2088
+< total 6
+< drwxrwxrwx 1 root root    0 Jun 23 23:39 .
+---
+> total 14
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 .
+2014a2090
+> -rwxrwxrwx 1 root root 6148 Jun 23 23:33 .DS_Store
+2016c2092
+< -rwxrwxrwx 1 root root  583 Jun 23 23:39 mags.yml
+---
+> -rwxrwxrwx 1 root root  582 Jun 23 23:33 mags.yml
+2032,2033c2108,2109
+< total 4
+< drwxrwxrwx 1 root root    0 Jun 23 23:39 .
+---
+> total 5
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 .
+2035a2112,2119
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 previews
+> -rwxrwxrwx 1 root root  593 Jun 23 23:33 user_mailer_test.rb
+> 
+> ../abr-master/test/mailers/previews:
+> total 1
+> drwxrwxrwx 1 root root   0 Jun 23 23:33 .
+> drwxrwxrwx 1 root root   0 Jun 23 23:33 ..
+> -rwxrwxrwx 1 root root 431 Jun 23 23:33 user_mailer_preview.rb
+2038,2039c2122,2123
+< total 5
+< drwxrwxrwx 1 root root    0 Jun 23 23:39 .
+---
+> total 13
+> drwxrwxrwx 1 root root    0 Jun 23 23:33 .
+2040a2125
+> -rwxrwxrwx 1 root root 6148 Jun 23 23:33 .DS_Store
+2048c2133
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..
+3383c3468
+< drwxrwxrwx 1 root root 4096 Jun 23 23:39 ..
+---
+> drwxrwxrwx 1 root root 4096 Jun 23 23:33 ..

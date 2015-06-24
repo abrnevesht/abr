@@ -13,6 +13,8 @@ class Mag < ActiveRecord::Base
     self.text4 ||='مطلب مربوط به تیتر آخر'
     self.modir ||='نام مدیرمسئول نشریه'
     self.sardabir ||='نام سردبیر'
+    self.email ||='nashreh@example.com'
+
   end
 
 end

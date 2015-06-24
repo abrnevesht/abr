@@ -29,15 +29,7 @@ Rails.application.routes.draw do
   get 'welcome/guid'
   get 'qr/index'
 
-
   get 'auth/login_email'
-
-  #devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
-
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -88,10 +80,14 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  root 'welcome#index'
-
-
   resources :mags
+
+  resources :sessions, only: [:create, :destroy]
+  resource :who_ru, only: [:show]
+  resources :account_activations, only: [:edit]
+  resources :password_resets,     only: [:new, :create, :edit, :update]
+  
+  resources :sessions, only: [:create, :destroy]
   resources :users
   resources :comments
 
@@ -100,12 +96,5 @@ Rails.application.routes.draw do
   #get 'auth/failure', to: redirect('/')
   #get 'signout', to: 'sessions#destroy', as: 'signout'
 
-  resources :account_activations, only: [:edit]
-  resources :password_resets,     only: [:new, :create, :edit, :update]
-  
-  resources :sessions, only: [:create, :destroy]
 
-  resource :who_ru, only: [:show]
-
-  #root to: "who_ru#show"
 end
