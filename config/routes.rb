@@ -87,6 +87,8 @@ Rails.application.routes.draw do
   
   resources :sessions, only: [:create, :destroy]
   resources :users
+ 
+  root "welcome#index"
 
   #get 'auth/:provider/callback', to: 'sessions#create'
   #get 'auth/google_login/callback', to: 'sessions#create'
