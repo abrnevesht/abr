@@ -9,6 +9,7 @@ page[size="A4"] {
   display: block;
   margin: 0 auto;
   margin-bottom: 0.5cm;
+  padding: 0.5cm;
   box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
 }
 @media print {
@@ -24,11 +25,14 @@ page[size="A4"] {
   float : right;
 }
 
-#kenar_logo {
-  width : 12cm;
-  height : 8cm;
+#kenar_logo_container {
+  width : 11cm;
+  height : 7cm;
   float : left;
+  border-style: dashed ;
+  padding: 0.5cm;
 }
+
 
 #titr1_sar{
   width : 8cm;

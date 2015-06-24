@@ -12,9 +12,9 @@
 <%= render 'layouts/header' %>
 <div id="nav" font-size="large">
 <p>
-<a href="auth/welcome"><%= yield(:menu1) %></a>
+<%= link_to yield(:menu1), {:controller => :mags, :action => :create}, :method => :post %>
 <p>
-<a href="auth/welcome"><%= yield(:menu2) %></a>
+<%= link_to  yield(:menu2), :controller => :mags, :action => :new %>
 </div>
 
 <div id="section">
@@ -22,7 +22,7 @@
 </div>
 
 <div id="footer">
-این سایت محصول نهایی کلاس محاسبات ابری دانشکده علوم و فنون نوین دانشگاه تهران می باشد و هرگونه استفاده از آن با صلواتی بر محمد و آل محمد مجاز است.
+این سایت محصول نهایی کلاس محاسبات ابری دانشکده علوم و فنون نوین دانشگاه تهران می باشد و هرگونه استفاده از آن با صلواتی بر محمد(ص) و آل محمد(ع) مجاز است.
 </div>
 </div>
 </body>

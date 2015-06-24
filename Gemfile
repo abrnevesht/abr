@@ -45,9 +45,8 @@ gem 'omniauth-google-oauth2'
 #gem 'haml'
 #gem 'haml-rails'
 gem 'figaro'
-
-#gem 'mercury-rails'
-#gem 'tinymce-rails'
+#gem 'carrierwave'
+gem "paperclip"
 gem 'ckeditor'
 
 group :development, :test do

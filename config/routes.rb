@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
   get 'single_texts/edit'
+  get 'single_texts/update'
 
   get 'sessions/create'
 
@@ -18,7 +20,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  #root 'welcome#index'
+  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -76,7 +78,4 @@ Rails.application.routes.draw do
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
   resources :sessions, only: [:create, :destroy]
-  resource :who_ru, only: [:show]
-
-  root to: "who_ru#show"
 end
