@@ -2,7 +2,8 @@ class Mag < ActiveRecord::Base
   before_save :default_values
   def default_values
     self.logo ||= 'logo'
-    self.descrip ||='مطلب کوتاهی برای قرارگرفتن در کنار لوگو را در اینجا قراردهید'
+    self.klogo ||='مطلب کوتاهی برای قرارگرفتن در کنار لوگو را در اینجا قراردهید'
+    self.descrip ||='نشریه اجتماعی-سیاسی شماره اول'
     self.titr1 ||=' تیترسرمقاله'
     self.text1 ||='مطلب اول شما که می تواند سرمقاله باشد در اینجا قرار میگیرد'
     self.titr2 ||='تیتر اصلی نشریه '

@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'qr/index'
-
   mount Ckeditor::Engine => '/ckeditor'
 
   get 'password_resets/new'

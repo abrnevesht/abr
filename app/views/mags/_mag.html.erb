@@ -1,0 +1,5 @@
+ <% s= ActionView::Base.full_sanitizer.sanitize( mag.descrip) %>
+<div id="menu_small" >
+    <%= link_to mag.name, {:controller => :mags, :id =>mag.id}, :method => :post %> :
+    <p> <%= s %>
+</div> 
