@@ -10,4 +10,10 @@ class SingleTextsController < ApplicationController
      @st=SingleTexts.new()
   end
 
+  def update
+    @mag = Mag.find(params[:ind])
+    render "edit"
+    #if @mag.update_attribute()
+  end
+
 end

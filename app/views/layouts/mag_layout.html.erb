@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<% require 'cgi' %>
 </html>
 <head>
   <title><%= yield(:title) %></title>
@@ -13,40 +14,48 @@
    <div id="logo">
       <img src= "<%= yield(:logo) %>" alt="logo" style="width:8cm;height:8cm">
       <%= yield(:k_logo) %>
-      <%if params[:action] == "edit" %>
-        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :field => "logo" }%>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "logo" }%>
       <% end %>
    </div>
-   <div id="kenar_logo">
+   <div id="kenar_logo_container">
+     
       <%= yield(:k_logo) %>
-      <%if params[:action] == "edit" %>
-        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :field => "descrip" }%>
+      <%if params[:action] != "show" %>
+      <%if params[:action] == "new" %>
+           <%= yield(:descrip_new) %>
+      <% end %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "descrip" }%>
       <% end %>
    </div>
    <div id="sarmaghale">
    <div id="titr1_sar">
-      <%= yield(:titr1) %>
-      <%if params[:action] == "edit" %>
+      <% yield(:titr1) %>
+      <%if params[:action] != "show" %>
+         <%if params[:action] == "new" %>
+تیتر مطلب اول
+          <% end %>
+      
         <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id],:field => "titr1" }%>
       <% end %>
    </div>
     <br>
       <%= yield(:text1) %>
-      <%if params[:action] == "edit" %>
-        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :field => "text1" }%>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "text1" }%>
       <% end %>
    </div>
    <div id="titre2">
    <div id="titr2_sar">
       <%= yield(:titr2) %>
-      <%if params[:action] == "edit" %>
-        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :field => "titr2" }%>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "titr2" }%>
       <% end %>
    </div>
       <br>
       <%= yield(:text2) %>
-      <%if params[:action] == "edit" %>
-        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :field => "text2" }%>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "text2" }%>
       <% end %>
    </div>
 </page>
@@ -54,44 +63,44 @@
   <div id="titre3">
     <div id="sar_titr3">
       <%= yield(:titr3) %>
-      <%if params[:action] == "edit" %>
-        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :field => "titr3" }%>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "titr3" }%>
       <% end %>
     </div>
       <br>
       <%= yield(:text3) %>
-      <%if params[:action] == "edit" %>
-        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :field => "text3" }%>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "text3" }%>
       <% end %>
   </div>
 
   <div id="titre4">
     <div id="sar_titr4">
       <%= yield(:titr4) %>
-      <%if params[:action] == "edit" %>
-        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :field => "titr4" }%>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "titr4" }%>
       <% end %>
     </div>
       <br>
       <%= yield(:text4) %>
-      <%if params[:action] == "edit" %>
-        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :field => "text4" }%>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "text4" }%>
       <% end %>
   </div>
 
   <div id="shenasnameh">
     مدیر مسئول:
      <%= yield(:modir) %>
-      <%if params[:action] == "edit" %>
-        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :field => "modir" }%>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "modir" }%>
       <% end %>
 ;
 
 سردبیر:
 
      <%= yield(:sardabir) %>
-      <%if params[:action] == "edit" %>
-        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :field => "sardabir" }%>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "sardabir" }%>
       <% end %>
 
   </div>
