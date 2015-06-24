@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'qr/index'
+
   get 'password_resets/new'
 
   get 'password_resets/edit'
@@ -12,7 +14,6 @@ Rails.application.routes.draw do
   get    'signup'  => 'users#new'
   get    'manage'  => 'manage#main'
 
-
   get 'single_texts/edit'
 
   get 'sessions/create'
@@ -23,6 +24,7 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
   get 'welcome/guid'
+  get 'qr/index'
 
 
   get 'auth/login_email'
@@ -35,6 +37,7 @@ Rails.application.routes.draw do
 
   resources :mags
   resources :users
+  resources :comments
 
   #get 'auth/:provider/callback', to: 'sessions#create'
   #get 'auth/google_login/callback', to: 'sessions#create'
