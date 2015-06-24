@@ -1,15 +1,14 @@
 class SessionsController < ApplicationController
-<<<<<<< HEAD
-  def create
-    user = User.from_omniauth(env["omniauth.auth"])
-    session[:user_id] = user.id
-    redirect_to root_path
-  end
+  #def create
+  #  user = User.from_omniauth(env["omniauth.auth"])
+  #  session[:user_id] = user.id
+  #  redirect_to root_path
+  #end
 
-  def destroy
-    session[:user_id] = nil
-    redirect_to root_path
-=======
+  #def destroy
+  #  session[:user_id] = nil
+ #   redirect_to root_path
+  #end
   def new 	
   end
 
@@ -40,6 +39,5 @@ class SessionsController < ApplicationController
     session.delete(:user_id)
     @current_user = nil
     redirect_to root_url
->>>>>>> 28d9ca5558dde4dadfeecef6651419471f46e011
   end
 end
