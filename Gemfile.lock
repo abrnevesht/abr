@@ -249,11 +249,8 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
-<<<<<<< HEAD
   wkhtmltopdf
-=======
   will_paginate
 
 BUNDLED WITH
    1.10.3
->>>>>>> refs/remotes/origin/master
