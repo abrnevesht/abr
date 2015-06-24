@@ -10,8 +10,8 @@ class UsersController < ApplicationController
   def new
   	#@users = Array.new(2){User.new}
     @user = User.new
-    @user2 = User.new
-    render layout: "welcome_layout"
+    #@user2 = User.new
+    #render layout: "welcome_layout"
   end
   
   def create
