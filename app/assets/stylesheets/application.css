@@ -18,11 +18,11 @@
 #nav {
     line-height:30px;
     height:1000px;
-    width:150px;
+    width:170px;
     float:left;
     color:#DCE3DC;
-    padding:5px;
-    font-size: x-large;
+    padding:0px;
+    font-size: small;
     background-color:#343434;
 }
 /* unvisited link */

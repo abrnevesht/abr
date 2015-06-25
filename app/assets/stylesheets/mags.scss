@@ -20,12 +20,26 @@ page[size="A4"] {
   }
 }
 
-#logo {
+#logo_container {
   width : 8cm;
   height : 8cm;
   float : right;
 }
 
+#logo{
+  width : 8cm;
+  height : 7cm;
+  float : right;
+}
+
+#desc{
+  width : 8cm;
+  height : 1cm;
+  float : right;
+  background-color :black;
+  color:white;
+  text-align: center;
+}
 #body {
     background: #DCE3DC url("/assets/images/books.png") no-repeat right top;
 }
@@ -51,7 +65,7 @@ page[size="A4"] {
   height : 21cm;
   float : right;
   box-shadow: 0 0 0.5cm rgba(0,0,0,0.3);
-  text-align: justify;
+  text-align: right;
 
 }
 

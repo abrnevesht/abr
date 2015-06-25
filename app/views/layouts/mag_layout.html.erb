@@ -21,21 +21,29 @@
 <div id="section">
 
 <page size="A4" id="mag">
-   <div id="logo">
+   <div id="logo_container">
+    <div id="logo">
       <img src= "<%= yield(:logo) %>" alt="تصویر لوگوی نشریه" style="width:8cm;height:8cm">
       <%= yield(:logo) %>
       <%if params[:action] != "show" %>
         <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "logo" }%>
       <% end %>
+    </div>
+    <div id="desc">
+      <%= yield(:descrip) %>
+      <%if params[:action] != "show" %>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "descrip" }%>
+      <% end %>
+    </div>
    </div>
    <div id="kenar_logo_container">
      
       <%= yield(:k_logo) %>
       <%if params[:action] != "show" %>
       <%if params[:action] == "new" %>
-           <%= yield(:descrip_new) %>
+           <%= yield(:k_logo) %>
       <% end %>
-        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "descrip" }%>
+        <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "k_logo" }%>
       <% end %>
    </div>
    <div id="sarmaghale">

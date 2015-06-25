@@ -14,7 +14,7 @@ class MagsController < ApplicationController
   end
 
   def create
-    @mag =Mag.new()
+    @mag =Mag.new(:name=>User.find_by(id: session[:user_id]).name)
     if @mag.save
       redirect_to :controller => 'mags', :action => 'edit', :id => @mag.id 
     else

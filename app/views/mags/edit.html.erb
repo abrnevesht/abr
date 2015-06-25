@@ -1,9 +1,10 @@
-<% provide(:title, "ویرایش نشریه")%>
+<% provide(:title, "نمایش نشریه")%>
 <% provide(:logo, @mag.logo.html_safe)%>
-<% provide(:k_logo, @mag.descrip.html_safe)%>
-<% provide(:titr1,CGI.unescapeHTML(@mag.titr1).html_safe) %>
+<% provide(:k_logo, @mag.klogo.html_safe)%>
+<% provide(:descrip, @mag.descrip.html_safe)%>
+<% provide(:titr1, @mag.titr1.html_safe)%>
 <% provide(:text1, @mag.text1.html_safe)%>
-<% provide(:titr2, CGI.unescapeHTML(@mag.titr2).html_safe)%>
+<% provide(:titr2, @mag.titr2.html_safe)%>
 <% provide(:text2, @mag.text2.html_safe)%>
 <% provide(:titr3, @mag.titr3.html_safe)%>
 <% provide(:text3, @mag.text3.html_safe)%>
@@ -12,8 +13,5 @@
 <% provide(:modir, @mag.modir.html_safe)%>
 <% provide(:sardabir, @mag.sardabir.html_safe)%>
 <% provide(:email, @mag.email.html_safe)%>
-
-
-
 
 
