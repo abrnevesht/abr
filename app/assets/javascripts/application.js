@@ -192,6 +192,10 @@ window.open('','','letf=0,top=0,width=1,height=1,toolbar=0,scrollbars=0,sta­tus
      $('#mag').printElement();
      //CallPrint($('#mag'));
 }
+function printpage()
+{
+   window.print()
+}
 
 
 

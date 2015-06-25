@@ -1,7 +1,7 @@
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-
-redirect_to root_url
-
-  </div>
-</div>
+<% provide :title, 'لیست کاربران نشریه شما' %>
+    <% @users.each do |a| %>
+	<tr>
+		<td><%= a.name %></td>
+		<td><%= a.email %></td>
+	</tr>
+	<% end %>
