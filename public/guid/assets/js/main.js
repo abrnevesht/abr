@@ -1,45 +1,53 @@
 /*
-	Big Picture by HTML5 UP
+	Overflow by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 (function($) {
 
+	var settings = {
+
+		// Full screen header?
+			fullScreenHeader: true,
+
+		// Parallax background effect?
+			parallax: true,
+
+		// Parallax factor (lower = more intense, higher = less intense).
+			parallaxFactor: 10
+
+	};
+
 	skel.breakpoints({
-		wide: '(max-width: 1920px)',
-		normal: '(max-width: 1680px)',
-		narrow: '(max-width: 1280px)',
-		narrower: '(max-width: 1000px)',
-		mobile: '(max-width: 736px)',
-		mobilenarrow: '(max-width: 480px)',
+		wide: '(max-width: 1680px)',
+		normal: '(max-width: 1080px)',
+		narrow: '(max-width: 840px)',
+		mobile: '(max-width: 736px)'
 	});
 
 	$(function() {
 
 		var	$window = $(window),
-			$body = $('body'),
-			$header = $('#header'),
-			$all = $body.add($header);
+			$body = $('body');
+
+		if (skel.vars.touch) {
+
+			settings.parallax = false;
+			$body.addClass('is-scroll');
+
+		}
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
 
 			$window.on('load', function() {
-				window.setTimeout(function() {
-					$body.removeClass('is-loading');
-				}, 0);
+				$body.removeClass('is-loading');
 			});
 
-		// Touch mode.
-			skel.on('change', function() {
-
-				if (skel.vars.mobile || skel.breakpoint('mobile').active)
-					$body.addClass('is-touch');
-				else
-					$body.removeClass('is-touch');
-
-			});
+		// CSS polyfills (IE<9).
+			if (skel.vars.IEVersion < 9)
+				$(':last-child').addClass('last-child');
 
 		// Fix: Placeholder polyfill.
 			$('form').placeholder();
@@ -52,181 +60,102 @@
 				);
 			});
 
-		// CSS polyfills (IE<9).
-			if (skel.vars.IEVersion < 9)
-				$(':last-child').addClass('last-child');
-
-		// Gallery.
-			$window.on('load', function() {
-				$('.gallery').poptrox({
-					baseZIndex: 10001,
-					useBodyOverflow: false,
-					usePopupEasyClose: false,
-					overlayColor: '#1f2328',
-					overlayOpacity: 0.65,
-					usePopupDefaultStyling: false,
-					usePopupCaption: true,
-					popupLoaderText: '',
-					windowMargin: (skel.breakpoint('mobile').active ? 5 : 50),
-					usePopupNav: true
-				});
+		// Scrolly links.
+			$('.scrolly-middle').scrolly({
+				speed: 1000,
+				anchor: 'middle'
 			});
 
-		// Section transitions.
-			if (!skel.vars.mobile
-			&&	skel.canUse('transition')) {
+			$('.scrolly').scrolly({
+				speed: 1000,
+				offset: function() { return (skel.breakpoint('mobile').active ? 70 : 190); }
+			});
 
-				var on = function() {
+		// Full screen header.
+			if (settings.fullScreenHeader) {
 
-					// Generic sections.
-						$('.main.style1')
-							.scrollex({
-								mode:		'middle',
-								delay:		100,
-								initialize:	function() { $(this).addClass('inactive'); },
-								terminate:	function() { $(this).removeClass('inactive'); },
-								enter:		function() { $(this).removeClass('inactive'); },
-								leave:		function() { $(this).addClass('inactive'); }
-							});
+				var $header = $('#header');
 
-						$('.main.style2')
-							.scrollex({
-								mode:		'middle',
-								delay:		100,
-								initialize:	function() { $(this).addClass('inactive'); },
-								terminate:	function() { $(this).removeClass('inactive'); },
-								enter:		function() { $(this).removeClass('inactive'); },
-								leave:		function() { $(this).addClass('inactive'); }
-							});
+				if ($header.length > 0) {
 
-					// Work.
-						$('#work')
-							.scrollex({
-								top:		'40vh',
-								bottom:		'30vh',
-								delay:		50,
-								initialize:	function() {
+					var $header_header = $header.find('header');
 
-												var t = $(this);
+					$window
+						.on('resize.overflow_fsh', function() {
 
-												t.find('.row.images')
-													.addClass('inactive');
+							if (skel.breakpoint('mobile').active)
+								$header.css('padding', '');
+							else {
 
-											},
-								terminate:	function() {
+								var p = Math.max(192, ($window.height() - $header_header.outerHeight()) / 2);
+								$header.css('padding', p + 'px 0 ' + p + 'px 0');
 
-												var t = $(this);
+							}
 
-												t.find('.row.images')
-													.removeClass('inactive');
+						})
+						.trigger('resize.overflow_fsh');
 
-											},
-								enter:		function() {
+					$window.load(function() {
+						$window.trigger('resize.overflow_fsh');
+					});
 
-												var t = $(this),
-													rows = t.find('.row.images'),
-													length = rows.length,
-													n = 0;
-
-												rows.each(function() {
-													var row = $(this);
-													window.setTimeout(function() {
-														row.removeClass('inactive');
-													}, 100 * (length - n++));
-												});
-
-											},
-								leave:		function(t) {
-
-												var t = $(this),
-													rows = t.find('.row.images'),
-													length = rows.length,
-													n = 0;
-
-												rows.each(function() {
-													var row = $(this);
-													window.setTimeout(function() {
-														row.addClass('inactive');
-													}, 100 * (length - n++));
-												});
-
-											}
-							});
-
-					// Contact.
-						$('#contact')
-							.scrollex({
-								top:		'50%',
-								delay:		50,
-								initialize:	function() { $(this).addClass('inactive'); },
-								terminate:	function() { $(this).removeClass('inactive'); },
-								enter:		function() { $(this).removeClass('inactive'); },
-								leave:		function() { $(this).addClass('inactive'); }
-							});
-
-				};
-
-				var off = function() {
-
-					// Generic sections.
-						$('.main.style1')
-							.unscrollex();
-
-						$('.main.style2')
-							.unscrollex();
-
-					// Work.
-						$('#work')
-							.unscrollex();
-
-					// Contact.
-						$('#contact')
-							.unscrollex();
-
-				};
-
-				skel.on('change', function() {
-
-					if (skel.breakpoint('mobile').active)
-						(off)();
-					else
-						(on)();
-
-				});
+				}
 
 			}
 
-		// Events.
-			var resizeTimeout, resizeScrollTimeout;
+		// Parallax background.
 
-			$window
-				.resize(function() {
+			// Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
+				if (skel.vars.browser == 'ie'
+				||	skel.vars.mobile)
+					settings.parallax = false;
 
-					// Disable animations/transitions.
-						$body.addClass('is-resizing');
+			if (settings.parallax) {
 
-					window.clearTimeout(resizeTimeout);
+				var $dummy = $(), $bg;
 
-					resizeTimeout = window.setTimeout(function() {
+				$window
+					.on('scroll.overflow_parallax', function() {
 
-						// Update scrolly links.
-							$('a[href^=#]').scrolly({
-								speed: 1500,
-								offset: $header.outerHeight() - 1
-							});
+						// Adjust background position.
+							$bg.css('background-position', 'center ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
 
-						// Re-enable animations/transitions.
-							window.setTimeout(function() {
-								$body.removeClass('is-resizing');
-								$window.trigger('scroll');
-							}, 0);
+					})
+					.on('resize.overflow_parallax', function() {
 
-					}, 100);
+						// If we're in a situation where we need to temporarily disable parallax, do so.
+							if (!skel.breakpoint('wide').active
+							||	skel.breakpoint('narrow').active) {
 
-				})
-				.load(function() {
-					$window.trigger('resize');
-				});
+								$body.css('background-position', '');
+								$bg = $dummy;
+
+							}
+
+						// Otherwise, continue as normal.
+							else
+								$bg = $body;
+
+						// Trigger scroll handler.
+							$window.triggerHandler('scroll.overflow_parallax');
+
+					})
+					.trigger('resize.overflow_parallax');
+
+			}
+
+		// Poptrox.
+			$('.gallery').poptrox({
+				useBodyOverflow: false,
+				usePopupEasyClose: false,
+				overlayColor: '#0a1919',
+				overlayOpacity: (skel.vars.IEVersion < 9 ? 0 : 0.75),
+				usePopupDefaultStyling: false,
+				usePopupCaption: true,
+				popupLoaderText: '',
+				windowMargin: 10,
+				usePopupNav: true
+			});
 
 	});
 
