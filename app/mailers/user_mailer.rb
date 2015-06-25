@@ -19,5 +19,15 @@ class UserMailer < ApplicationMailer
     @user = user
     mail to: user.email, subject: "Password reset"
   end
+
+  def comment_email(text) #user
+    @comment = text
+     mail(:to => "ns.samadi@gmail.com", #user.email
+         :subject => "نظر خوانندگان نشریه")
+  end
+
+  def alaki
+    mail to: "ns.samadi@gmail.com", subject: "Password reset"
+  end
   
 end

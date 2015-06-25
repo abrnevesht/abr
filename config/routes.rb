@@ -7,13 +7,12 @@ Rails.application.routes.draw do
   get 'password_resets/edit'
 
   get 'users/new'
-
+  
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   get    'signup'  => 'users#new'
   get    'manage'  => 'manage#main'
-
 
   get 'single_texts/edit'
   get 'single_texts/update'
@@ -26,6 +25,7 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
   get 'welcome/guid'
+  get 'qr/index'
 
   get 'auth/login_email'
 
@@ -87,6 +87,7 @@ Rails.application.routes.draw do
   
   resources :sessions, only: [:create, :destroy]
   resources :users
+  resources :comments
  
   root "welcome#index"
 

@@ -14,7 +14,7 @@
 <%= render 'layouts/header' %>
 <div id="nav" font-size="large">
 <%if params[:action] == "show" %>
-  <%= image_tag("/assets/images/print.png", :width=>150, :height=>150, :onclick=>"divPrint();", :class=>'btn') %>
+  <%= image_tag("/assets/images/print.png", :width=>150, :height=>150, media: 'print', :onclick=>"divPrint();", :class=>'btn') %>
 <%end%>
 </div>
 

@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require_tree .
 //= require ckeditor/init
-; (function (window, undefined) {
+ (function (window, undefined) {
     var document = window["document"];
     var $ = window["jQuery"];
     $.fn["printElement"] = function (options) {
@@ -175,8 +175,22 @@
     };
 })(window);
 
+function CallPrint(strid)
+{
+ var prtContent = document.getElementById("/assets/images/print.png");
+ var WinPrint =
+window.open('','','letf=0,top=0,width=1,height=1,toolbar=0,scrollbars=0,sta­tus=0');
+ WinPrint.document.write(prtContent.innerHTML);
+ WinPrint.document.close();
+ WinPrint.focus();
+ WinPrint.print();
+ WinPrint.close();
+ prtContent.innerHTML=strOldOne;
+}
+ 
   function divPrint() {
      $('#mag').printElement();
+     //CallPrint($('#mag'));
 }
 
 
