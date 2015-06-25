@@ -216,8 +216,8 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
-    wkhtmltopdf (0.1.2)
     will_paginate (3.0.7)
+    wkhtmltopdf (0.1.2)
 
 PLATFORMS
   ruby
@@ -249,11 +249,8 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
-<<<<<<< HEAD
-  wkhtmltopdf
-=======
   will_paginate
+  wkhtmltopdf
 
 BUNDLED WITH
    1.10.3
->>>>>>> refs/remotes/origin/master

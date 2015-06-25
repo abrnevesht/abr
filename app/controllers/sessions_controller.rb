@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
  #   redirect_to root_path
   #end
   def new 	
+     render layout: "welcome_layout"
   end
 
   def create

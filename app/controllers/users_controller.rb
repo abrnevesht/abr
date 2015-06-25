@@ -1,18 +1,17 @@
 class UsersController < ApplicationController
   def index
-    render :layout => "manage_layout"
+
   end
 
   def show
   	@user = User.find(params[:id])
-    #render :layout => "manage_layout"
   end
 
   def new
   	#@users = Array.new(2){User.new}
     @user = User.new
     @user2 = User.new
-    #render layout: "manage_layout"
+    render layout: "welcome_layout"
   end
   
   def create
