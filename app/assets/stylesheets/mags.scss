@@ -13,12 +13,6 @@ page[size="A4"] {
   padding: 0.5cm;
   box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
 }
-@media print {
-  body, page[size="A4"] {
-    margin: 0;
-    box-shadow: 0;
-  }
-}
 
 #logo_container {
   width : 8cm;
@@ -138,3 +132,5 @@ page[size="A4"] {
 p {
     white-space: nowrap;
 } 
+#shenasnameh {color:blue;}
+

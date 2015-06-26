@@ -1,20 +1,15 @@
-<% provide(:title, "Log in") %>
-<h1>Log in</h1>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+<% provide(:title, "ورود") %>
+<h1>ورود به سامانه ابرنوشت</h1>
     <%= form_for(:session, url: login_path) do |f| %>
 
-      <%= f.label :email %>
+      <%= f.label :"رایانامه" %>
       <%= f.email_field :email, class: 'form-control' %>
 
-      <%= f.label :password %>
+      <%= f.label :password,"کلمه عبور" %>
       <%= link_to "(forgot password)", new_password_reset_path %>
       <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.submit "Log in", class: "btn btn-primary" %>
+      <%= f.submit "ورود به سامانه ابر نوشت", class: "btn btn-primary" %>
     <% end %>
 
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
-  </div>
-</div>
+    <p>آیا نشریه شما در ابرنوشت ثبت نام نشده است؟ <%= link_to "هم اکنون ثبت نام کنید!", signup_path %></p>

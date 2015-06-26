@@ -177,7 +177,7 @@
 
 function CallPrint(strid)
 {
- var prtContent = document.getElementById("/assets/images/print.png");
+ var prtContent = document.getElementById();
  var WinPrint =
 window.open('','','letf=0,top=0,width=1,height=1,toolbar=0,scrollbars=0,sta­tus=0');
  WinPrint.document.write(prtContent.innerHTML);

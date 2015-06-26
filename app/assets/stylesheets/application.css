@@ -27,7 +27,7 @@
 }
 /* unvisited link */
 a:link {
-    color:#DCE3DC;
+    color:#736153;
     text-decoration: none;
 }
 
@@ -45,7 +45,7 @@ a:hover {
 
 /* selected link */
 a:active {
-    color: #DCE3DC;
+    color: #DCE3DD;
     text-decoration: none;
 }
 

@@ -1,5 +1,18 @@
 @media print {
-  div.info, div#editStuff, div#navigation, div#debug {
-    display: none;
+body {background-color:yellow;}
+  body, page[size="A4"] {
+    margin: 0;
+    box-shadow: 0;
+  }
+  #section {
+  	visibility: hidden;
+  }
+  #logo_container, #logo, #desc, #kenar_logo_container * {
+    visibility: visible;
+  }
+  #logo_container{
+    width : 8cm;
+  height : 8cm;
+  float : right;
   }
 }
