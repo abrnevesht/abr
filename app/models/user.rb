@@ -23,6 +23,7 @@ class User < ActiveRecord::Base
       return false 
     else
       return true
+    end
     #BCrypt::Password.new(digest)#.is_password?(token)
   end
 
