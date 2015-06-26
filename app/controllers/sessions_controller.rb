@@ -11,7 +11,8 @@ class SessionsController < ApplicationController
  #   redirect_to root_path
   #end
   def new 	
-    render layout: "welcome_layout"
+        @message = "none"
+     render layout: "welcome_layout"
   end
 
   def create
@@ -29,8 +30,9 @@ class SessionsController < ApplicationController
       end
     else
       # Create an error message.
+
+      
       @message = "Invalid email/password combination"
-      #redirect_to root_url
       render 'new'
     end
     #user = User.from_omniauth(env["omniauth.auth"])
