@@ -19,11 +19,11 @@ class User < ActiveRecord::Base
 
   def authenticated?(attribute)
     digest = send("#{attribute}_digest")
-    if digest.nil?
-      return false 
-    else
+    #if digest.nil?
+      #return false 
+    #else
       return true
-    end
+    #end
     #BCrypt::Password.new(digest)#.is_password?(token)
   end
 

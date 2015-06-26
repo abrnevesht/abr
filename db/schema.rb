@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150627021634) do
+ActiveRecord::Schema.define(version: 20150626160739) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",               null: false
@@ -54,7 +54,6 @@ ActiveRecord::Schema.define(version: 20150627021634) do
     t.string   "titr4"
     t.text     "text4"
     t.string   "klogo"
-    t.string   "QR"
   end
 
   create_table "users", force: :cascade do |t|
@@ -71,6 +70,7 @@ ActiveRecord::Schema.define(version: 20150627021634) do
     t.boolean  "activated",         default: false
     t.datetime "activated_at"
     t.string   "reset_digest"
+    t.datetime "reset_sent_at"
   end
 
 end
