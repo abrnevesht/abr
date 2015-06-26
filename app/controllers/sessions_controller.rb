@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
   def create
   	user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
-      if 1#user.activated? 
+      if 1#user.activated? #1
         log_in user
         redirect_to manage_path
       else

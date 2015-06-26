@@ -1,17 +1,36 @@
+/*
+ *= require print
+ */
 
-#body_page {
-  background: #DCE3DC; 
-}
+@media print {
+    #nav {
+      display: none;
+  }
+    #hea {
+      display: none;
+  }
+ #footer {
+      display: none;
+  }
+ #section {
+    width:21cm;
+    height:1000px;
+    float:left;
+   }
 
+ body {
+      background-color:yellow;
+      }
 page[size="A4"] {
-  background: white;
+  background: white !important;
   width: 21cm;
   height: 29.7cm;
   display: block;
   margin: 0 auto;
-  margin-bottom: 0.5cm;
   padding: 0.5cm;
   box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+  page-break-after: always;
+
 }
 
 #logo_container {
@@ -30,7 +49,7 @@ page[size="A4"] {
   width : 8cm;
   height : 1cm;
   float : right;
-  background-color :black;
+  background-color :black !important;
   color:white;
   text-align: center;
 }
@@ -50,7 +69,7 @@ page[size="A4"] {
   font-size:large;
   width : 7.4cm;
   height : 1.5cm;
-  background-color :rgba(0,0,0,0.3);
+  background-color :rgba(0,0,0,0.3)!important;
 }
 
 #sarmaghale{
@@ -66,14 +85,14 @@ page[size="A4"] {
 #titr2_sar{
   width : 11.9cm;
   height : 1.5cm;
-  background-color :rgba(0,0,0,0.3);
+  background-color :rgba(0,0,0,0.3)!important;
   text-align: center;
 
 }
 #titre2{
   border-style: ridge;
   width : 12cm;
-  height : 21cm;
+  height : 20cm;
   float : left;
   text-align: right;
 }
@@ -83,7 +102,17 @@ page[size="A4"] {
   width : 10cm;
   height : 1.5cm;
   text-align: center;
-  background-color :rgba(0,0,0,0.3);
+}
+#titre2{
+  width : 12cm;
+  height : 21.5cm;
+  float : left;
+}
+
+#titr3_sar{
+  width : 10cm;
+  height : 1.5cm;
+  background-color :rgba(0,0,0,0.3)!important;
 
 }
 #titre3{
@@ -115,7 +144,7 @@ page[size="A4"] {
   height : 1cm;
   float:right;
   text-align: center;
-  background-color :rgba(0,0,0,0.3);
+  background-color :rgba(0,0,0,0.3) !important;
   line-height: 70%;
   color:blue;
 }
@@ -123,6 +152,6 @@ page[size="A4"] {
 p {
     white-space: nowrap;
 } 
-
-
+  
+}   
 

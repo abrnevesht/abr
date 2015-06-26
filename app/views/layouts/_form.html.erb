@@ -28,15 +28,20 @@
 	  					<div class="col-md-20 col-md-offset-5" >
 						  	
 						  	<%= form_for(@user) do |f| %>
-						    <%= f.label :title %>
+						    
+						    <%= f.label :'نام نشریه شما' %>
 						    <%=  f.text_field :name, class: 'form-control' %>
-						    <%= f.label :body %>
+						    
+						    <%= f.label :'رایانامه شما' %>
 						    <%= f.email_field :email, class: 'form-control' %>
-						    <%= f.label :title %>
+						    
+						    <%= f.label :Password, 'کلمه عبور' %>
 						    <%=  f.password_field :password, class: 'form-control' %>
-						    <%= f.label :body %>
+						    
+						    <%= f.label :password_confirmation, 'تکرار کلمه عبور' %>
 						    <%= f.password_field :password_confirmation, class: 'form-control' %>
 						    <%= f.submit "حساب کاربری نشریه من را بساز", class: "btn btn-primary" %>
+						    
 						    <% end %>
 
 						  </div></div></div>
@@ -50,15 +55,21 @@
 	<% else %>
 
 	<% provide(:title, 'عضویت یک نشریه در ابرنوشت') %>
+	
 	<%= form_for(@user) do |f| %>
-    <%= f.label :title %>
+    
+    <%= f.label :'نام نشریه شما' %>
     <%=  f.text_field :name, class: 'form-control' %>
-    <%= f.label :body %>
+    
+    <%= f.label :'رایانامه شما' %>
     <%= f.email_field :email, class: 'form-control' %>
-    <%= f.label :title %>
+    
+    <%= f.label :Password , "کلمه عبور"%>
     <%=  f.password_field :password, class: 'form-control' %>
-    <%= f.label :body %>
+    
+    <%= f.label :password_confirmation, "تکرار کلمه عبور" %>
     <%= f.password_field :password_confirmation, class: 'form-control' %>
+
     <%= f.submit "حساب کاربری نشریه من را بساز", class: "btn btn-primary" %>
   <% end %>
 
