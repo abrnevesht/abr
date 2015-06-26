@@ -1,3 +1,4 @@
+# encoding: utf-8
 class CommentsController < ApplicationController
 	def new
 		render layout: "welcome_layout"

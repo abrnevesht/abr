@@ -1,5 +1,4 @@
-
-# auth_controller.rb
+# encoding: utf-8
 class AuthController < ApplicationController
 	def callback
 		auth_hash = request.env['omniauth.auth']

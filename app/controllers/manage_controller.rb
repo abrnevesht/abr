@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'will_paginate/array'
 class ManageController < ApplicationController
   def main

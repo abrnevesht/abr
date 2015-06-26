@@ -1,3 +1,4 @@
+# encoding: utf-8
 class SingleTextsController < ApplicationController
   def edit
      f = params[:field]

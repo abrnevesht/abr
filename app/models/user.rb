@@ -19,7 +19,11 @@ class User < ActiveRecord::Base
 
   def authenticated?(attribute)
     digest = send("#{attribute}_digest")
-    return false if digest.nil?
+    if digest.nil?
+      return false 
+    else
+      return true
+    #BCrypt::Password.new(digest)#.is_password?(token)
   end
 
   # Sets the password reset attributes.

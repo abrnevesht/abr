@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<% require 'cgi' %>
+</html>
+<head>
+  <title><%= yield(:title)%></title>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-6">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="body">
+<%= render 'layouts/header' %>
+<div id="section" >
+<div class="row">
+  <div class="col-md-20 col-md-offset-5" >
+<%= yield %>
+  </div>
+</div>
+
+</div>
+
+<div id="footer" >
+این سایت محصول نهایی کلاس محاسبات ابری دانشکده علوم و فنون نوین دانشگاه تهران می باشد و هرگونه استفاده از آن با صلواتی بر محمد(ص) و آل محمد(ع) مجاز است.
+</div>
+</div>
+
+  </div>
+
+</page>
+
+</body>
+</html>
