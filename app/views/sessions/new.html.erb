@@ -1,15 +1,61 @@
-<% provide(:title, "ورود") %>
-<h1>ورود به سامانه ابرنوشت</h1>
-    <%= form_for(:session, url: login_path) do |f| %>
+  <% if @message == "Invalid email/password combination" %>
+  			<!DOCTYPE html>
 
-      <%= f.label :"رایانامه" %>
-      <%= f.email_field :email, class: 'form-control' %>
+				<% require 'cgi' %>
+				</html>
+					<head>
+					  <title>خطا در وارد کردن اطلاعات</title>
+					  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-6">
+					  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+					  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+					  <%= csrf_meta_tags %>
+					</head>
+					<body>
+					<div id="body">
+					  <%= render 'layouts/header' %>
+					    <div id="section" >
+							<div class="row">
+	  					<div class="col-md-20 col-md-offset-5" >
+	  			  	        <% flash.now[:danger] = @message %>
+						  	<h1>ورود به سامانه ابرنوشت</h1>
+					    	<%= form_for(:session, url: login_path) do |f| %>
 
-      <%= f.label :password,"کلمه عبور" %>
-      <%= link_to "(forgot password)", new_password_reset_path %>
-      <%= f.password_field :password, class: 'form-control' %>
+					      	<%= f.label :"رایانامه" %>
+					      	<%= f.email_field :email, class: 'form-control' %>
 
-      <%= f.submit "ورود به سامانه ابر نوشت", class: "btn btn-primary" %>
-    <% end %>
+					      	<%= f.label :password,"کلمه عبور" %>
+						    <%= link_to "(forgot password)", new_password_reset_path %>
+						    <%= f.password_field :password, class: 'form-control' %>
 
-    <p>آیا نشریه شما در ابرنوشت ثبت نام نشده است؟ <%= link_to "هم اکنون ثبت نام کنید!", signup_path %></p>
+						    <%= f.submit "ورود به سامانه ابر نوشت", class: "btn btn-primary" %>
+					    	<% end %>
+			    			<p>آیا نشریه شما در ابرنوشت ثبت نام نشده است؟ <%= link_to "هم اکنون ثبت نام کنید!", signup_path %></p>
+
+
+						  </div></div></div>
+
+					    <div id="footer" >
+							این سایت محصول نهایی کلاس محاسبات ابری دانشکده علوم و فنون نوین دانشگاه تهران می باشد و هرگونه استفاده از آن با صلواتی بر محمد(ص) و آل محمد(ع) مجاز است.
+					  	</div>
+					  	</page>
+						</body>
+					</html>
+	<% else %>
+
+		<% provide(:title, "ورود") %>
+		<h1>ورود به سامانه ابرنوشت</h1>
+    	<%= form_for(:session, url: login_path) do |f| %>
+
+	      	<%= f.label :"رایانامه" %>
+	      	<%= f.email_field :email, class: 'form-control' %>
+
+	      	<%= f.label :password,"کلمه عبور" %>
+		    <%= link_to "(forgot password)", new_password_reset_path %>
+		    <%= f.password_field :password, class: 'form-control' %>
+
+		    <%= f.submit "ورود به سامانه ابر نوشت", class: "btn btn-primary" %>
+    	<% end %>
+
+		<p>آیا نشریه شما در ابرنوشت ثبت نام نشده است؟ <%= link_to "هم اکنون ثبت نام کنید!", signup_path %></p>
+ <% end %>
+

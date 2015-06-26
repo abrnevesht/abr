@@ -11,26 +11,27 @@ class SessionsController < ApplicationController
  #   redirect_to root_path
   #end
   def new 	
-     render layout: "welcome_layout"
+    render layout: "welcome_layout"
   end
 
   def create
+    @message = "none"
   	user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
       if 1#user.activated? #1
         log_in user
         redirect_to manage_path
       else
-        message  = "Account not activated. "
-        message += "Check your email for the activation link."
-        flash[:warning] = message
+        message1  = "Account not activated. "
+        message1 += "Check your email for the activation link."
+        flash[:warning] = message1
         redirect_to root_url
       end
     else
       # Create an error message.
-      
-      redirect_to login_path, flash.now[:danger] = 'Invalid email/password combination'
-      #render 'new'
+      @message = "Invalid email/password combination"
+      #redirect_to root_url
+      render 'new'
     end
     #user = User.from_omniauth(env["omniauth.auth"])
     #session[:user_id] = user.id

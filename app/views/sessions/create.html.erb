@@ -1,4 +1,4 @@
-  <% if @user.errors.any? %>
+  <% if @message = "Invalid email/password combination" %>
   			<!DOCTYPE html>
 
 				<% require 'cgi' %>
@@ -13,16 +13,6 @@
 					<body>
 					<div id="body">
 					  <%= render 'layouts/header' %>
-					    <div id="error_explanation">
-					      <div class="alert alert-danger">
-					     		<%= pluralize(@user.errors.count, "error") %> in the from:
-								</div>
-					      <ul>
-					      	<% @user.errors.full_messages.each do |msg| %>
-					        	<li><%= msg %></li>
-					      	<% end %>
-					      </ul>
-					    </div>
 					    <div id="section" >
 							<div class="row">
 	  					<div class="col-md-20 col-md-offset-5" >
