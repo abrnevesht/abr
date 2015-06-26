@@ -1,10 +1,8 @@
-<% provide(:title, "کلمه عبورم را فراموش کرده‌ام! ") %>
-<h1>کلمه عبورم را فراموش کرده‌ام!</h1>
-<%= render :layout "layouts/welcom_layout" %>
-
+<% provide(:title, "بازیابی کلمه عبور ") %>
+<h1>بازیابی کلمه عبور</h1>
     <%= form_for(:password_reset, url: password_resets_path) do |f| %>
-      <%= f.label :email %>
+      <%= f.label :رایانامه %>
       <%= f.email_field :email, class: 'form-control' %>
 
-      <%= f.submit "Submit", class: "btn btn-primary" %>
+      <%= f.submit "کلمه عبور مرا مجددا تعریف کن", class: "btn btn-primary" %>
       <% end %>

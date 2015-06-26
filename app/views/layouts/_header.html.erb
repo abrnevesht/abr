@@ -1,11 +1,13 @@
 <div>
 <ul class="cbdb-menu">
 	<% if logged_in? %>
-          <li><a href="sessions/destroy" class="red dark">خروج</a> </li>
+          <li><a href="/sessions/destroy" class="red dark">خروج</a> </li>
     <% else %>
           <li><a href="login" class="green dark">ورود</a></li>
     <% end %>
-    <li><a href="#" class="green dark">راهنما</a></li>
+      <%if params[:action] != "guid" %>
+    <li><a href="/welcome/guid" class="green dark">راهنما</a></li>
+    <% end %>
 
   </li>
 </ul>

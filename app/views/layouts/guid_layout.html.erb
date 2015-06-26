@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<% require 'cgi' %>
+</html>
+<head>
+  <title>راهنمای سامانه</title>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-6">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="body">
+<%= render 'layouts/header' %>
+<div id="section" >
+<div class="row">
+	<div style="text-align:center">
+	بسم الله الرحمن الرحیم
+	<br>
+	راهنمای سامانه
+</div>
+  <div class="col-md-20 col-md-offset-5" >
+  	در این سامانه می‌توانید نشریات خود را به صروت یکپارچه با همکاران خود تنظیم و مدیریت کنید.
+  	برای استفاده از این سامانه لازم است ابتدا با ثبت نام در سامانه از طریق پینوند زیر و با وارد کردن نام و رایانامه نشریه خود به اعضای این سامانه بپیوندید.
+  </div>
+  	<% link_to "نشانک آدمک در صفحه اصلی", {:controller => "users", :action => "new"} %>
+  	 می‌توانید 
+  </div>
+</div>
+
+</div>
+
+<div id="footer" >
+این سایت محصول نهایی کلاس محاسبات ابری دانشکده علوم و فنون نوین دانشگاه تهران می باشد و هرگونه استفاده از آن با صلواتی بر محمد(ص) و آل محمد(ع) مجاز است.
+</div>
+</div>
+
+  </div>
+
+</page>
+
+</body>
+</html>
