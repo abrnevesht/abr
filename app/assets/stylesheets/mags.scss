@@ -21,7 +21,7 @@ page[size="A4"] {
 }
 
 #logo{
-  width : 8cm;
+  width : 7cm;
   height : 7cm;
   float : right;
 }
@@ -42,9 +42,16 @@ page[size="A4"] {
   height : 8cm;
   float : left;
   border-style: dashed ;
-  padding: 0.5cm;
+  padding:0;
 }
 
+
+#qr
+{
+  width : 100px;
+  height :100px;
+  float:left;
+}
 
 #titr1_sar{
   font-size:large;

@@ -53,8 +53,9 @@ page[size="A4"] {
   color:white;
   text-align: center;
 }
-#body {
+ #body {
     background: #DCE3DC url("/assets/images/books.png") no-repeat right top;
+    -webkit-print-color-adjust:exact;
 }
 #kenar_logo_container {
   width : 11cm;
