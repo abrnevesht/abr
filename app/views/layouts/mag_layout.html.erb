@@ -17,9 +17,10 @@
 </div>
 <div id="nav" font-size="large">
 <%if params[:action] == "show" %>
-<div id="printsho">
-   </div>
     <%= image_tag("/assets/images/print.png", :width=>150, :height=>150, onclick: "window.print();", :class=>'btn') %>
+<p>
+
+<%= link_to image_tag("/assets/images/edit.png", :border => 0, :width=>150, :height=>150), {:action => 'edit', :controller => 'mags'}, {:id => params[:id]}%>
 <%end%>
 </div>
 
