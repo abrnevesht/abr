@@ -10,6 +10,7 @@ class CommentsController < ApplicationController
 		#render plain: params[:comment].inspect
 		UserMailer.comment_email(params[:comment].inspect)#.deliver_now
 		@comment = Comment.new(params.require(:comment).permit(:text))
+        redirect_to(:back)
 		#!!!!!!!redirect_to bayad az comment dar biaaaaaaaaaad
 		#redirect_to :controller => 'mags', :action => 'show', :id =>params[:id]
 		#@comment.save

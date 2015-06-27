@@ -17,7 +17,14 @@ class MagsController < ApplicationController
   def create
     @mag =Mag.new(:name=>User.find_by(id: session[:user_id]).name)
     if @mag.save
-      redirect_to :controller => 'mags', :action => 'edit', :id => @mag.id 
+  	 	@st="https://abrnevesht.herokuapp.com/"+"comments/new"
+    	@st=@st+"?index="
+    	@st=@st+ @mag.id.to_s
+    	@st=@st+"&name="
+    	@st=@st+ @mag.name
+  		@qr = RQRCode::QRCode.new(@st).to_img.resize(100, 100).to_data_url
+        r = @mag.update_attribute(:QR, @qr)
+        redirect_to :controller => 'mags', :action => 'edit', :id => @mag.id 
     else
       render 'new'
     end

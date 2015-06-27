@@ -21,8 +21,9 @@ class UserMailer < ApplicationMailer
   end
 
   def comment_email(text) #user
-    @comment = text
-     mail(:to => "ns.samadi@gmail.com", #user.email
+     mag=Mag.Find(params[index])       
+     @comment = text
+     mail(:to => mag.email, #user.email
          :subject => "نظر خوانندگان نشریه")
   end
 

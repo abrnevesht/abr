@@ -42,7 +42,9 @@
     </div>
    </div>
    <div id="kenar_logo_container">
-     
+      <div id="qr">
+        <%= image_tag yield(:qr) %>
+      </div>
       <%= yield(:k_logo) %>
       <%if params[:action] != "show" %>
       <%if params[:action] == "new" %>
@@ -50,6 +52,7 @@
       <% end %>
         <%= link_to "ویرایش", {:controller => "single_texts", :action => "edit", :index=>params[:id], :field => "klogo" }%>
       <% end %>
+
    </div>
    <div id="sarmaghale">
    <div id="titr1_sar">
