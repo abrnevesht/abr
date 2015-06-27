@@ -57,6 +57,13 @@ a:active {
     padding:10px;
 }
 
+#section2 {
+    width:550px;
+    height:1000px;
+    float:left;
+    padding:10px;
+    text-align: right;
+}
 #body {
     background: #DCE3DC url("/assets/images/books.png") no-repeat right top;
 }
