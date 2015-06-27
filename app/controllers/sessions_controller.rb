@@ -28,8 +28,9 @@ class SessionsController < ApplicationController
       end
     else
       # Create an error message.
-      flash.now[:danger] = 'Invalid email/password combination'
-      render 'new'
+      
+      redirect_to login_path, flash.now[:danger] = 'Invalid email/password combination'
+      #render 'new'
     end
     #user = User.from_omniauth(env["omniauth.auth"])
     #session[:user_id] = user.id

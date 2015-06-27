@@ -1,8 +1,8 @@
 <% if @user.errors.any? %>
+<%= render 'layouts/header' %>
 <div id="section" >
 <div class="row">
   <div class="col-md-20 col-md-offset-5" >
-
   <div id="error_explanation">
     <div class="alert alert-danger">
       The form contains <%= pluralize(@user.errors.count, "error") %>.
@@ -13,6 +13,7 @@
     <% end %>
     </ul>
   </div>
+</div>
 </div>
 </div>
 </div>

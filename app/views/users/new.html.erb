@@ -1,19 +1,2 @@
-<% provide(:title, 'عضویت یک نشریه در ابرنوشت') %>
-<%= form_for @user do |user_form| %>
-    <%= render 'shared/error_messages' %>
 
-  	  <%= user_form.label :"نام نشریه شما" %>
-      <%= user_form.text_field :name, class: 'form-control'%> 
-
-      <%= user_form.label :"رایانامه شما"  %>
-      <%= user_form.email_field :email, class: 'form-control' %>
-
-      <%= user_form.label :Password , "کلمه عبور"%>
-      <%= user_form.password_field :password, class: 'form-control' %>
-
-      <%= user_form.label :password_confirmation, "تکرار کلمه عبور" %>
-      <%= user_form.password_field :password_confirmation, class: 'form-control' %>
-      
-      <%= user_form.submit "حساب کاربری نشریه من را بساز", class: "btn btn-primary" %>    
-
-    <% end %>
+    <%= render  'layouts/form' %>
