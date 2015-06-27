@@ -251,3 +251,6 @@ DEPENDENCIES
   web-console (~> 2.0)
   will_paginate
   wkhtmltopdf
+
+BUNDLED WITH
+   1.10.3
