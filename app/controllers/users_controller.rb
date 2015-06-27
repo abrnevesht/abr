@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
+    render layout: "welcome_layout"
   end
 
   def new

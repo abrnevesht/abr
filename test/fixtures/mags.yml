@@ -1,32 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  descrip: MyString
-  titr1: MyString
-  text1: MyText
-  titr2: MyString
-  text2: MyText
-  titr3: MyString
-  text3: MyText
-  logo: MyString
+  name: bonbaz
+  descrip: nashrie
+  titr1: titr1
+  text1: text1
+  titr2: titr2
+  text2: text2
+  titr3: titr3
+  text3: text3
+  logo: logo
   data: 2015-06-21 20:06:58
-  email: MyString
-  modir: MyString
-  sardabir: MyString
-
-two:
-  name: MyString
-  descrip: MyString
-  titr1: MyString
-  text1: MyText
-  titr2: MyString
-  text2: MyText
-  titr3: MyString
-  text3: MyText
-  logo: MyString
-  data: 2015-06-21 20:06:58
-  email: MyString
-  modir: MyString
-  sardabir: MyString
+  email: bonbaz@chmail.ir
+  modir: modir
+  sardabir: sardabir
 
