@@ -5,31 +5,21 @@
 <head>
   <title><%= yield(:title) %></title>
   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-6">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', :media => 'screen, projection', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag "print", media: 'print' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <div id="body">
+<div id="hea">
 <%= render 'layouts/header' %>
-<style>
-#printsho {background-color:yellow;}
-</style>
+</div>
 <div id="nav" font-size="large">
 <%if params[:action] == "show" %>
 <div id="printsho">
-<script type="text/javascript">     
-        function PrintDiv() {    
-           var divToPrint = document.getElementById('section');
-           var popupWin = window.open('', '_blank', 'width=900,height=900');
-           //popupWin.document.open();
-           popupWin.document.write('<html><link rel="stylesheet" href="../../assets/stylesheets/print.css" type="text/css" media="print"/><body>' + divToPrint.innerHTML + '</body></html>');
-           popupWin.document.write();
-            popupWin.document.close();
-                }
-     </script>
    </div>
-    <%= image_tag("/assets/images/print.png", :width=>150, :height=>150, onclick: "PrintDiv()", :class=>'btn') %>
+    <%= image_tag("/assets/images/print.png", :width=>150, :height=>150, onclick: "window.print();", :class=>'btn') %>
 <%end%>
 </div>
 
